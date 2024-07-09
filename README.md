@@ -1,1 +1,1 @@
-en este archivo esta todo el proyecto profesora aqui podre un poco de la imagenes de la pagina ya ejecutada 
+en este archivo esta todo el proyecto profesora aqui pondre un poco de la imagenes de la pagina ya ejecutada 
