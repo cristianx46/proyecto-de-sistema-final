@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 70px;
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+.contacto-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contacto-container p {
+    text-align: center;
+    color: #666;
+}
+
+.contacto-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-container label {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.contacto-container input, .contacto-container textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto-container button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.contacto-container button:hover {
+    background-color: #575757;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.redes-sociales {
+    margin-bottom: 10px;
+}
+
+.redes-sociales a img {
+    width: 30px; /* Ajusta el tamaño de los iconos de redes sociales */
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.redes-sociales a img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letras - Tienda de Libros</title>
+    <link rel="icon" href="Logol.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos adicionales para el carrito */
+        .carrito {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #f9f9f9;
+            border-left: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+            height: 100vh;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000; /* Añadido para asegurar que esté por encima de otros elementos */
+        }
+        
+        .carrito h2 {
+            margin-top: 0;
+        }
+        
+        .carrito ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .carrito li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .carrito .total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .carrito-btn {
+            cursor: pointer;
+        }
+        
+        .carrito-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 12px;
+        }
+        
+        /* Estilo adicional para mostrar el carrito */
+        .carrito.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logol.png" alt="Logo Letras">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="usados.html">Usados</a></li>
+                <li><a href="biblioteca.html">Categorías</a>
+                    <ul class="submenu">
+                        <li><a href="infantiles.html">Infantiles</a></li>
+                        <li><a href="terror.html">Terror</a></li>
+                        <li><a href="drama.html">Drama</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.php">Usuario</a></li>
+                <li><a href="#" class="carrito-btn">Carrito (<span class="carrito-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="terror">
+            <div class="slider">
+                <div class="slides">
+                    <img src="dram2.jpg" alt="Slider 1" class="active">
+                    <img src="drama.jpg" alt="Slider 2">
+                    
+                </div>
+            </div>
+            </section>
+        </br>
+            <center><h1 style="color: #666; font-family: Arial, sans-serif; font-size: 40px;">LIBROS DE DRAMA</h1></center>
+
+            <div class="libros">
+                <div class="libro">
+                    <img src="ret.jpg" alt="Libro 1">
+                    <h3>El Retrato De Dorian Gray (Usado)</h3>
+                    <p>Cuando se publicó El retrato de Dorian Gray, la crítica moralizante acusó a su protagonista de ser una figura satánica, corrompida y corruptora, sin comprender que era el héroe de una novela que reflejaba la fatalidad de los románticos: Oscar Wilde (1854-1900) había querido hacer de la belleza un refinamiento de la inteligencia; y para ello sumió a su protagonista en una atmósfera de perversión dominada por el arte y los poderes de un misterio que está más allá de la realidad. </p>
+                    <p class="precio">12.95 $</p>
+                    <button class="add-to-cart" data-id="1">Añadir al Carrito</button>
+                </div>
+                
+                <div class="libro">
+                    <img src="odi.jpg" alt="Libro 2">
+                    <h3>Odisea</h3>
+                    <p>He aquí uno de los más grandes poemas épicos de todos los tiempos: Odisea. En él se narra el regreso del héroe, Odiseo, a su patria, Ítaca, después de la conquista de Troya. Compuesta como la Ilíada en hexámetros, recoge numerosos cuentos populares y leyendas que, adaptadas, se integran en la epopeya. </p>
+                    <p class="precio">14.95 $</p>
+                    <button class="add-to-cart" data-id="2">Añadir al Carrito</button>
+                </div>
+
+                <div class="libro">
+                    <img src="romeo.jpg" alt="Libro 3">
+                    <h3>Romeo Y Julieta </h3>
+                    <p>Descubre con Alfaguara Clásicos Romeo y Julieta de Shakespeare, un clásico de todos los tiempos que explora las pasiones más tiernas y más terribles del ser humano. </p>
+                    <p class="precio">21.95 $</p>
+                    <button class="add-to-cart" data-id="3">Añadir al Carrito</button>
+                </div>
+
+                <div class="libro">
+                    <img src="ni.jpg" alt="Libro 4">
+                    <h3>El niño con el pijama de rayas (Usado)</h3>
+                    <p>Aunque el uso habitual de un texto como éste es describir las características de la obra, por una vez nos tomaremos la libertad de hacer una excepción a la norma establecida.</p>
+                    <p class="precio">12.99 $</p>
+                    <button class="add-to-cart" data-id="4">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="redes-sociales">
+            <a href="#"><img src="face.png" alt="Facebook"></a>
+            <a href="#"><img src="tik.png" alt="Twitter"></a>
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Letras - Tienda de Libros. </p>
+    </footer>
+
+    <!-- Carrito de compras -->
+    <div class="carrito">
+        <h2>Carrito de Compras</h2>
+        <button class="close-cart">Cerrar Carrito</button>
+        <ul class="carrito-lista">
+            <!-- Aquí se añadirán los elementos del carrito dinámicamente -->
+        </ul>
+        <div class="total">Total: $<span id="total">0.00</span></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Código JavaScript para manejar el carrito de compras
+        document.addEventListener('DOMContentLoaded', function () {
+            const carritoBtns = document.querySelectorAll('.add-to-cart');
+            const carritoContainer = document.querySelector('.carrito');
+            const carritoLista = document.querySelector('.carrito-lista');
+            const totalDisplay = document.getElementById('total');
+            let carrito = [];
+            
+            // Función para agregar un libro al carrito
+            function addToCart(id, titulo, precio) {
+                // Verificar si el libro ya está en el carrito
+                const existingItem = carrito.find(item => item.id === id);
+                
+                if (existingItem) {
+                    existingItem.cantidad++;
+                } else {
+                    carrito.push({
+                        id: id,
+                        titulo: titulo,
+                        precio: precio,
+                        cantidad: 1
+                    });
+                }
+                
+                renderCarrito();
+            }
+            
+            // Función para renderizar el carrito
+            function renderCarrito() {
+                carritoLista.innerHTML = '';
+                let total = 0;
+                
+                carrito.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <span>${item.titulo} x ${item.cantidad}</span>
+                        <span>$${item.precio * item.cantidad}</span>
+                        <button class="remove-item" data-id="${item.id}">Eliminar</button>
+                    `;
+                    carritoLista.appendChild(li);
+                    total += item.precio * item.cantidad;
+                });
+                
+                totalDisplay.textContent = total.toFixed(2);
+                updateCartCount();
+            }
+            
+            // Función para actualizar el contador de elementos en el carrito
+            function updateCartCount() {
+                const cartCount = carrito.reduce((total, item) => total + item.cantidad, 0);
+                const cartBtn = document.querySelector('.carrito-btn');
+                cartBtn.innerHTML = `Carrito (${cartCount})`;
+                document.querySelector('.carrito-count').textContent = cartCount;
+            }
+            
+            // Event listener para los botones de añadir al carrito
+            carritoBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const id = parseInt(btn.dataset.id);
+                    const titulo = btn.parentElement.querySelector('h3').textContent.trim();
+                    const precio = parseFloat(btn.parentElement.querySelector('.precio').textContent.replace('€', '').trim());
+                    addToCart(id, titulo, precio);
+                });
+            });
+            
+            // Event listener para mostrar/ocultar el carrito
+            document.querySelector('.carrito-btn').addEventListener('click', function () {
+                carritoContainer.classList.toggle('show');
+            });
+            
+            // Event listener para cerrar el carrito
+            document.querySelector('.close-cart').addEventListener('click', function () {
+                carritoContainer.classList.remove('show');
+            });
+            
+            // Event listener para eliminar un elemento del carrito
+            carritoContainer.addEventListener('click', function (e) {
+                if (e.target && e.target.classList.contains('remove-item')) {
+                    const itemId = parseInt(e.target.dataset.id);
+                    const itemIndex = carrito.findIndex(item => item.id === itemId);
+                    
+                    if (itemIndex !== -1) {
+                        carrito[itemIndex].cantidad--;
+                        if (carrito[itemIndex].cantidad <= 0) {
+                            carrito.splice(itemIndex, 1);
+                        }
+                    }
+                    
+                    renderCarrito();
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slides img');
+            let currentSlide = 0;
+            
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            
+            setInterval(nextSlide, 3000); // Cambia cada 3 segundos (3000 milisegundos)
+        });
+    </script>
+    
+    
+</body>
+
+</html>

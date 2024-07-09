@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Letras</title>
+    <link rel="icon" href="Logol.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 70px;
+            margin-left: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+            width: max-content;
+            z-index: 1000;
+        }
+
+        nav ul li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .submenu li a {
+            display: block;
+            padding: 5px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section#nosotros {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #2e2e2e;
+            font-family: 'Arial', sans-serif;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .redes-sociales {
+            margin-bottom: 10px;
+        }
+
+        .redes-sociales a {
+            margin: 0 10px;
+        }
+
+        .redes-sociales img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logol.png" alt="Logo Letras">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="usados.html">Usados</a></li>
+                <li><a href="biblioteca.html">Categorías</a>
+                    <ul class="submenu">
+                        <li><a href="infantiles.html">Infantiles</a></li>
+                        <li><a href="terror.html">Terror</a></li>
+                        <li><a href="drama.html">Drama</a></li>
+                 
+                    </ul>
+                </li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="usuario.html">Usuario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="nosotros">
+            <h1>Sobre Nosotros</h1>
+            <p>Bienvenido a Letras, tu tienda de libros nuevos y usados. Nos apasiona la lectura y creemos en el poder transformador de los libros. Nuestro objetivo es proporcionar a nuestros clientes una amplia selección de títulos, desde clásicos hasta las últimas novedades, a precios accesibles.</p>
+            <h2>Nuestra Historia</h2>
+            <p>Letras fue fundada en 2024 por un grupo de amigos amantes de los libros. Tenemos un compromiso con la calidad y el servicio al cliente para convertirnos en una tienda en línea reconocida.</p>
+            <h2>Qué Ofrecemos</h2>
+            <ul>
+                <li>Una amplia selección de libros nuevos y usados</li>
+                <li>Recomendaciones personalizadas</li>
+                <li>Precios competitivos</li>
+                <li>Un espacio para amantes de la lectura</li>
+            </ul>
+            <h2>Nuestro Compromiso</h2>
+            <p>En Letras, nos comprometemos a ofrecer libros de alta calidad y un servicio excepcional. Nos esforzamos por crear una comunidad de lectores apasionados y proporcionar una experiencia de compra agradable y fácil.</p>
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta o comentario, no dudes en <a href="contacto.html">contactarnos</a>. Estamos aquí para ayudarte.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="redes-sociales">
+            <a href="#"><img src="face.png" alt="Facebook"></a>
+            <a href="#"><img src="tik.png" alt="Twitter"></a>
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Letras - Tienda de Libros. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
